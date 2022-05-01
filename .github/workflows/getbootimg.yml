@@ -57,6 +57,7 @@ jobs:
 
     
     - name: Upload the bootimg to WeTransfer
+      if: ${{ always() }}
       run: |
         cd ~
         curl -sL https://git.io/file-transfer | sh
